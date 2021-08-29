@@ -12,6 +12,7 @@ public class Main {
         databaseManager = new DatabaseManager();
         databaseManager.initTables();
 
+
         input = new Scanner(System.in);
         subMenuOptions = new SubMenuOptions();
         subMenuOptions.menuChoice(input);
@@ -20,6 +21,8 @@ public class Main {
     public static void getMainMenu() {
         subMenuOptions.menuChoice(input);
     }
+
+
 }
 
 

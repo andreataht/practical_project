@@ -5,13 +5,11 @@ public class Customer {
     private int customerId;
     private String firstName;
     private String lastName;
-    private String middleName;
     private String email;
     private String phoneNumber;
-    private String profileImage;
     private String userName;
     private String password;
-    private int accountStatus;
+
 
 
     public int getCustomerId() {
@@ -38,14 +36,6 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -60,14 +50,6 @@ public class Customer {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getProfileImage() {
-        return profileImage;
-    }
-
-    public void setProfileImage(String profileImage) {
-        this.profileImage = profileImage;
     }
 
     public String getUserName() {
@@ -86,13 +68,6 @@ public class Customer {
         this.password = password;
     }
 
-    public int getAccountStatus() {
-        return accountStatus;
-    }
-
-    public void setAccountStatus(int accountStatus) {
-        this.accountStatus = accountStatus;
-    }
 
     @Override
     public String toString() {
@@ -100,11 +75,9 @@ public class Customer {
                 "customerId=" + customerId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", middleName='" + middleName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", userName='" + userName + '\'' +
-                ", accountStatus=" + accountStatus +
                 '}';
     }
 }

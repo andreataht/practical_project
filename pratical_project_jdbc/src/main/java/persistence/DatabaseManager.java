@@ -12,38 +12,37 @@ public class DatabaseManager {
     public DatabaseManager() {
         DBUtil.createDatabase();
         connection = DBUtil.getDBConnection();
+    }
 
 // ==============  customer table  ===============
-/*
-    private void createTableCustomer() {
-        String sql = "CREATE TABLE IF NOT EXISTS customer (\n"
-                + "	customer_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
-                + "	first_name varchar(30) DEFAULT NULL,\n"
-                + "	last_name varchar(30) DEFAULT NULL,\n"
-                + "	email varchar(50) DEFAULT NULL,\n"
-                + "	mobile varchar(10) DEFAULT NULL,\n"
-                + "	username varchar(20) DEFAULT NULL,\n"
-                + "	password varchar(20) DEFAULT NULL\n"
-                //+ "	 PRIMARY KEY (customer_id)\n"
-                + ");";
-        
-        try {
-             Statement stmt = connection.createStatement();
-            // create a new table
-            stmt.execute(sql);
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 
-    public void initTables() {
-        createTableCustomer();
-    }
-*/
+        private void createTableCustomer() {
+            String sql = "CREATE TABLE IF NOT EXISTS customer (\n"
+                    + "	customer_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
+                    + "	first_name varchar(30) DEFAULT NULL,\n"
+                    + "	last_name varchar(30) DEFAULT NULL,\n"
+                    + "	email varchar(50) DEFAULT NULL,\n"
+                    + "	mobile varchar(10) DEFAULT NULL,\n"
+                    + "	password varchar(20) DEFAULT NULL\n"
+                    //+ "	 PRIMARY KEY (customer_id)\n"
+                    + ");";
+
+
+            try {
+                Statement stmt = connection.createStatement();
+                // create a new table
+                stmt.execute(sql);
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
+
+
 
 //  ==================  Employee table  =======================
 
-/*
+
     private void createTableEmployee() {
         String sql = "CREATE TABLE IF NOT EXISTS employee (\n"
                 + "	employee_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
@@ -51,9 +50,7 @@ public class DatabaseManager {
                 + "	last_name varchar(30) DEFAULT NULL,\n"
                 + "	mobile varchar(10) DEFAULT NULL,\n"
                 + "	email varchar(50) DEFAULT NULL,\n"
-                + "	username varchar(20) DEFAULT NULL,\n"
                 + "	password varchar(20) DEFAULT NULL\n"
-                //+ "	 PRIMARY KEY (customer_id)\n"
                 + ");";
 
         try {
@@ -65,15 +62,11 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTableEmployee();
-    }
-}
-*/
+
 
 //  ====================== car table =============================================
 
-/*    private void createTableCar() {
+    private void createTableCar() {
         String sql = "CREATE TABLE IF NOT EXISTS car (\n"
                 + "	car_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                 + "	status int NOT NULL,\n"
@@ -96,14 +89,10 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTableCar();
-    }
-}*/
 
 // ================== period table ==================================
 
-/*    private void createTablePeriod() {
+    private void createTablePeriod() {
         String sql = "CREATE TABLE IF NOT EXISTS period (\n"
                 + "	period_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                 + "	start datetime,\n"
@@ -123,14 +112,10 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTablePeriod();
-    }
- }*/
 
 //  =================== order table =========================================
 
-/*    private void createTableOrder() {
+    private void createTableOrder() {
         String sql = "CREATE TABLE IF NOT EXISTS orders (\n"
                 + "	order_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                 + "	customer_id int,\n"
@@ -150,14 +135,11 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTableOrder();
-    }
-}*/
+
 
 // ==================== order details table ======================
 
-/*    private void createTableOrderDetails() {
+    private void createTableOrderDetails() {
         String sql = "CREATE TABLE IF NOT EXISTS order_details (\n"
                 + "	order_details_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                 + "	order_id int,\n"
@@ -178,14 +160,11 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTableOrderDetails();
-    }
-}*/
+
 
 // ============ payment ================
 
-/*    private void createTablePayment() {
+    private void createTablePayment() {
         String sql = "CREATE TABLE IF NOT EXISTS payment (\n"
                 + "	payment_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                 + "	order_id int,\n"
@@ -203,14 +182,11 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTablePayment();
-    }
-}*/
+
 
 // ============== rating =================
 
-/*    private void createTableRating() {
+    private void createTableRating() {
         String sql = "CREATE TABLE IF NOT EXISTS rating (\n"
                 + "	rating_id int PRIMARY KEY NOT NULL AUTO_INCREMENT,\n"
                 + "	car_id int,\n"
@@ -229,11 +205,17 @@ public class DatabaseManager {
         }
     }
 
-    public void initTables() {
-        createTableRating();
-    }
-}*/
 
+
+    public void initTables() {
+            createTableCustomer();
+            createTableEmployee();
+            createTableCar();
+            createTablePeriod();
+            createTableOrder();
+            createTableOrderDetails();
+            createTablePayment();
+            createTableRating();
 
     }
 }

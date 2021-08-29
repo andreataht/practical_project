@@ -10,14 +10,15 @@ public class MenuCustomer {
 
     private int menuOptions(Scanner input) {
         System.out.println("\n/***************************************************/");
-        System.out.println("Select the submenu option: ");
+        System.out.println("Select the customer's menu option: ");
         System.out.println("-------------------------\n");
         System.out.println();
-        System.out.println("1: List all customers");
+        System.out.println("1: List of all customers");
         System.out.println("2: Update account status");
-        System.out.println("3: List total active customers");
-        System.out.println("4: List total active and not active customers");
-        System.out.println("5: Update customers phone number by customer id");
+        System.out.println("3: Update customers phone number by customer id");
+        System.out.println("4: Update customers email by customer id");
+        System.out.println("5: Add new customer");
+        System.out.println("6: Remove customer");
         System.out.println("100 - Return to Main Menu");
         System.out.println("\n/***************************************************/");
         return input.nextInt();
